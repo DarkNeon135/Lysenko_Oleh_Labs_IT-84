@@ -8,7 +8,7 @@ public class TimeSkipassForDays extends TimeSkipass {
 
     public LocalDate getExpireDate() { return expireDate; }
 
-    private TimeSkipassForDays(CardAccessType accessType, LocalDate expireDate, double cost) {
+    public TimeSkipassForDays(CardAccessType accessType, LocalDate expireDate, double cost) {
         super(accessType, cost);
         this.expireDate = expireDate;
     }

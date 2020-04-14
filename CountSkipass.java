@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class CountSkipass extends Skipass {
 
-    private CountSkipass(CardAccessType accessType, int count, double cost) {
+    public CountSkipass(CardAccessType accessType, int count, double cost) {
         super(accessType, cost);
         this.count = count;
     }

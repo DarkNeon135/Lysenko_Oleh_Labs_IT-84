@@ -8,11 +8,11 @@ public abstract class Skipass {
     boolean blocked = false;
     public CardAccessType accessType;
     protected double cost;
-    protected static final double Cost = 200;
+    protected static final double Cost = 75;
 
     public abstract boolean checkPass(Register register);
 
-    protected Skipass(CardAccessType accessType, double cost) {
+    public Skipass(CardAccessType accessType, double cost) {
         this.accessType = accessType;
         this.cost = cost;
         id = ID++;
@@ -29,11 +29,11 @@ public abstract class Skipass {
     public CardAccessType getAccessType() { return accessType; }
 
     private boolean Warn() {
-        //
+        //warnings 
         return true;
     }
 
-    protected boolean checkForPreferential(Register register) {
+    public boolean checkForPreferential(Register register) {
         if(!(this.accessType == CardAccessType.Preferential)) {
             register.addPasses(new PassInfo(new Timestamp(System.currentTimeMillis()), this, true));
             return true;
