@@ -5,7 +5,7 @@ import java.util.*;
 
 
 public class Main {
-public ArrayList<String> convert(){
+public static ArrayList<String> convert(){
     ArrayList<String> result = new ArrayList<>();
     try (Scanner s = new Scanner(new FileReader("demo.txt"))) {
         while (s.hasNextLine()) {
@@ -16,7 +16,7 @@ public ArrayList<String> convert(){
     }
     return result;
 }
-public ArrayList<String> compare(){
+public static ArrayList<String> compare(){
     ArrayList<String> result = convert();
     result.sort(new Comparator<String>() {
         @Override
@@ -26,7 +26,7 @@ public ArrayList<String> compare(){
     });
     return result;
 }
-public void write() {
+public static void write() {
     ArrayList<String> result = compare();
     Writer writer = null;
     try {
@@ -43,10 +43,10 @@ public void write() {
     }
 }
     public static void main(String[] args) {
-    Main main  =  new Main();
-    main.convert();
-    main.compare();
-    main.write();
+
+    convert();
+    compare();
+    write();
 
   }
 }
