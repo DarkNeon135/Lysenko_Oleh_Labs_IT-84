@@ -2,8 +2,8 @@ package com.company;
 
 public enum Answer
 {
-    ALLOWED("ДОЗВОЛЕНО"),
-    FORBIDDEN("ЗОБОРОНЕНО"),
+    ALLOWED("Allowed"),
+    FORBIDDEN("Forbidden"),
     CHECK("");
 
     private String str;

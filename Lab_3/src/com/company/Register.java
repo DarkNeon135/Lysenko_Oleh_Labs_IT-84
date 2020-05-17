@@ -85,7 +85,7 @@ class Register
         if(card != null)
             return data.aboutCard(card, path + "data.txt");
         else
-            return "Карту (ID: " + cardID + ") не знайдено :(\n";
+            return "No card with (ID: " + cardID + ")  :(\n";
     }
 
     Answer checkCard(int cardID)
@@ -181,7 +181,7 @@ class Register
         if(!list.isEmpty())
             return data.statistics(list, path + "statistics.txt");
         else
-            return "Карток (TYPE: " + typeCard + ") не знайдено :(\n";
+            return "No cards with (TYPE: " + typeCard + ")  :(\n";
     }
 
     String getStatistics(int cardID) {
@@ -196,7 +196,7 @@ class Register
             return data.statistics(list, path + "statistics.txt");
         }
         else
-            return "Карту (ID: " + cardID + ") не знайдено :(\n";
+            return " No card with (ID: " + cardID + ") (\n";
     }
 
     private void IDtoJson(String pathName)

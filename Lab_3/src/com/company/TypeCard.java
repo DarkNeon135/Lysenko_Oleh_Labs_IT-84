@@ -2,9 +2,9 @@ package com.company;
 
 public enum TypeCard
 {
-    EXPIRATION_CARD("Картка з терміном дії"),
-    NUMBER_CARD("Картка із кількістю поїздок"),
-    CUMULATIVE_CARD("Накопичувальна картка");
+    EXPIRATION_CARD("Карта по истичению даты"),
+    NUMBER_CARD("Карта с числом поездок"),
+    CUMULATIVE_CARD("Накопительная карта");
 
     private String text;
 
