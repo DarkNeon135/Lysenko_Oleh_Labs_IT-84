@@ -27,7 +27,7 @@ class Turnstile
     {
         Answer answer = Answer.ALLOWED;
 
-        if(false) // Перевірка контролера
+        if(false)
         {
             register.returnResource(cardID);
             answer = Answer.FORBIDDEN;
