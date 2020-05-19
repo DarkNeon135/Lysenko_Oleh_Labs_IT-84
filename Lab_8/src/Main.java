@@ -19,25 +19,25 @@ public class Main {
 
         System.out.println(bank.getAcc());
 
-        ArrayList<Thread> threads = new ArrayList<Thread>();
+        ArrayList<Thread> threads = new ArrayList<>();
 
-        for(int i = 0;i < 20;i++){
+        for(int i = 0;i < 20;i++) {
             int from = random.nextInt(bank.size());
-            int  to = random.nextInt(bank.size());
+            int to = random.nextInt(bank.size());
             double money = 35;
-            threads.add( new Thread(()->bank.Make_transfer(bank.getBankAccount(from),bank.getBankAccount(to),money)));
-
-            for(Thread  thread: threads) {
-                thread.start();
+            threads.add(new Thread(() -> bank.Make_transfer(bank.getBankAccount(from), bank.getBankAccount(to), money)));
+        }
+            for (Thread thread1 : threads) {
+                thread1.start();
             }
-            for(Thread thread : threads){
-                if(thread.isAlive()){
+            for(Thread thread2 : threads){
+                if(thread2.isAlive()){
 
-                        thread.join();
+                        thread2.join();
 
                 }
             }
-            }
+
         }
     }
 
